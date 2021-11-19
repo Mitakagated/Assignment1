@@ -7,6 +7,8 @@ namespace Section1
         static void Main(string[] args)
         {
             TempConvert();
+            fuelEUtoUS();
+            fuelUStoEU();
         }
 
         private static void TempConvert()
@@ -37,8 +39,9 @@ namespace Section1
             }
         }
 
-        private static void fuelEUtoUS(double consumptionEU)
+        private static void fuelEUtoUS()
         {
+            double consumptionEU = double.Parse(Console.ReadLine());
             double milesPer1KM = 0.621371192;
             double gallonsPer1Litre = 0.264172052;
             double milesPer100KM = milesPer1KM * 100;
@@ -47,8 +50,9 @@ namespace Section1
             Console.WriteLine(result);
         }
 
-        private static void fuelUStoEU(double consumptionUS)
+        private static void fuelUStoEU()
         {
+            double consumptionUS = double.Parse(Console.ReadLine());
             double kmPer1Mile = 1.609;
             double litresPer1Gallon = 3.78;
             double hundredKMPer1Mile = kmPer1Mile / 100;
